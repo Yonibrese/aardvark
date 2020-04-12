@@ -9,4 +9,4 @@ class JewelryTypeAdmin(admin.ModelAdmin):
 
 @admin.register(models.Product)
 class ProductAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['id', 'date_added']
