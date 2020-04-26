@@ -4,6 +4,18 @@
 
 {% block content %}
 <div id="all_products" class="containers">
-
+    <div class="row">
+        {% for product in products %}
+        <div class="card text-center col-md-4">
+            <img class="card-img-top" src="{{ product.image.url }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.jewelry_type.name }}</h5>
+                <h6>{{ product.price }}</h6>
+                <p class="card-text">{{ product.disc }}</p>
+                <a href="#" class="btn btn-primary">view more</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

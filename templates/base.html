@@ -3,7 +3,7 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>{% block tilte %}Title{% endblock %}</title>
+    <title>{% block title %}Title{% endblock %}</title>
     {% block css %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {% endblock %}
@@ -16,13 +16,19 @@
                Aardvark Art and Physics
            </a>
            <nav class="nav justify-content-end">
-               <a class="nav-link" href="#">products</a>
+               <a class="nav-link" href="{% url 'products' %}">products</a>
+               <a class="nav-link" href="#">media</a>
                <a class="nav-link" href="#">contact</a>
            </nav>
        </nav>
    </div>
     {% block content %}
     {% endblock %}
+   <footer class="page-footer fixed-bottom bg-light">
+       <div class="footer text-muted text-center">
+           made by Yonibrese & Aaron Wolf: site V 1.0
+       </div>
+   </footer>
     {% block JS %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
